@@ -1,10 +1,14 @@
-import './App.css'
+import "./App.css";
+import Routes from "./components/Routes";
+import Header from "./components/header/Header";
 
 function App() {
-
   return (
-    <h1>App working on it ...</h1>
-  )
+    <div className="App w-full h-screen">
+      <Header />
+      <Routes />
+    </div>
+  );
 }
 
-export default App
+export default App;
