@@ -1,0 +1,10 @@
+.headerContainer {
+  /* background-color: var(--custom-background); */
+  color: var(--color);
+}
+
+.logo {
+  padding: 5px 20px;
+  max-width: 80px;
+  max-height: 80px;
+}
