@@ -6,21 +6,21 @@ import { useState } from "react";
 
 const Header = () => {
   const root = document.getElementsByTagName("html")[0];
-  const varColor = getComputedStyle(root).getPropertyValue("--color") + "33";
+  const rootColor = getComputedStyle(root).getPropertyValue("--background-color") + "33";
 
-  const [color, setColor] = useState(varColor);
+  const [color, setColor] = useState(rootColor);
 
+// change the header background color on dark mode
   const handlerThemeChange = () => {
-    const varColor = getComputedStyle(root).getPropertyValue("--color") + "33";
-
-    setColor(varColor);
+    const rootColor = getComputedStyle(root).getPropertyValue("--color") + "33";
+    setColor(rootColor);
   }
 
 
   return (
     <header
       style={{ backgroundColor: color }}
-      className={`${styles.headerContainer} w-full h-[80px] flex items-center justify-between px-8 border-b absolute top-0 z-10`}
+      className={`${styles.headerContainer} w-full h-[80px] flex items-center justify-between px-8 border-b absolute top-0 z-10 backdrop-blur-sm`}
     >
       <div className="flex align-center w-full h-full mx-3 [&>*]:flex [&>*]:items-center [&>*]:justify-between [&>*]:px-3">
         <Link to="/">
@@ -62,7 +62,7 @@ const Header = () => {
 
       </div>
 
-      <nav className="flex items-center justify-around w-full h-full px-5 [&>a]:h-full [&>a]:w-max [&>a]:px-4 [&>a]:flex [&>a]:items-center [&>a]:justify-around laptop:hidden">
+      <nav className="flex items-center justify-around w-full h-full px-5 [&>a]:h-full [&>a]:w-max [&>a]:px-2 [&>a]:flex [&>a]:items-center [&>a]:justify-around laptop:hidden">
         <Link to="/">Home</Link>
         <Link to="/offers">Offers</Link>
         <Link to="/prices">Price list</Link>
