@@ -8,8 +8,9 @@ export default {
     extend: {},
     screens: {
       "laptop": { max: "900px" },
-    }
+    },
   },
+  darkMode: "class",
   plugins: [],
-}
+};
 
