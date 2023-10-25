@@ -4,7 +4,7 @@ import Header from "./components/header/Header";
 
 function App() {
   return (
-    <div className="App w-full h-screen">
+    <div className="App w-full h-screen flex items-end justify-center">
       <Header />
       <Routes />
     </div>
