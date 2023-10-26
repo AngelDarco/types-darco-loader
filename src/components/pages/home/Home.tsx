@@ -1,10 +1,8 @@
-// import styles from "./home.module.css";
 import fondo from "../../../assets/videos/girl.mp4";
 import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div className="h-fit flex flex-col">
-
       <section className=" h-screen flex items-center justify-center relative">
         <motion.div layout layoutId="underline">
           <div
@@ -15,9 +13,9 @@ const Home = () => {
             </video>
           </div>
 
-          <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center flex-col dark:bg-[rgba(0,0,0,0.5)] bg-[rgba(255,255,255,0.5)]">
-            <h1 className="text-8xl px-10 drop-shadow-[0_0_6px_var(--background-color)]">Personal Trainer</h1>
-            <h3 className="text-4xl bold shadow-md my-9 text-center">I will help you achieve the intended results  </h3>
+          <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center flex-col dark:bg-[rgba(0,0,0,0.5)] bg-[rgba(255,255,255,0.2)]">
+            <h1 className="text-8xl px-10 drop-shadow-[0_0_6px_var(--color)]">Personal Trainer</h1>
+            <h3 className="text-4xl bold shadow-lg my-9 text-center px-4">I will help you achieve the intended results  </h3>
             <button className="px-10 py-4 bg-orange-600 text-3xl mt-6 hover:bg-orange-700">
               <motion.div whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}>
                 Free Training
@@ -32,12 +30,15 @@ const Home = () => {
            bg-[var(--background-color)]
             grid
              grid-cols-3
-              grid-rows-2 p-4 pt-32
+             content-center
+             p-4
 
           [&>div>h1]:text-5xl 
           [&>div>h1]:py-6 
           [&>div]:text-center
           [&>div]:relative
+          [&>div]:h-fit
+          [&>div]:px-2
     
     [&>div>.svg]:m-auto
     [&>div>.svg]:after:absolute 
@@ -86,18 +87,7 @@ const Home = () => {
           <h1>Effect</h1>
           <p>Nullam sodales urna molestie, euismod lectus tempus, vehicula urna. Sed mattis risus in eros posuere ultrices. </p>
         </div>
-        <div className="w-fit col-start-1 col-end-4 place-self-center self-end 
-        group">
-          <span className="bg-orange-600 w-0 h-2 block 
-          group-hover:w-full
-          animate-[loader1_3s_ease-in-out_forwards] 
-           "></span>
-          <h1 className="!text-7xl">
-            OFFER</h1>
-        </div>
-
       </section>
-
     </div>
   );
 };
