@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import Darkmode from "darco-dark-mode";
 import darkmodeVariables from "../../utils/darkmodeVariables.ts";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import AnimationHeader from "./AnimationHeader";
 
 const Header = () => {
   const root = document.getElementsByTagName("html")[0];
@@ -36,10 +36,10 @@ const Header = () => {
   return (
     <header
       style={{ backgroundColor: color }}
-      className={`${styles.headerContainer} w-full h-[var(--header-height)] flex items-center justify-between px-8 border-b absolute top-0 left-0 z-[100] backdrop-blur-sm`}
+      className={`${styles.headerContainer} w-full h-[var(--header-height)] flex items-center justify-between px-8 border-b border-b-[var(--color)] sticky top-0 left-0 z-[100] backdrop-blur-sm`}
     >
       <div className="flex align-center w-full h-full mx-3 [&>*]:flex [&>*]:items-center [&>*]:justify-between [&>*]:px-3">
-        <Animation>
+        <AnimationHeader>
           <Link to="/">
             <svg
               version="1.1"
@@ -73,55 +73,43 @@ const Header = () => {
               </g>
             </svg>
           </Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <span>Jhon Doe</span>
-        </Animation>
+        </AnimationHeader>
 
       </div>
 
       <nav className="flex items-center justify-around w-full h-full px-5 laptop:hidden">
-        <Animation>
+        <AnimationHeader>
           <Link to="/">Home</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/offers">Offers</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/prices">Price</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/about">About me</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/clients">Clients</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/contact">Contact</Link>
-        </Animation>
-        <Animation>
+        </AnimationHeader>
+        <AnimationHeader>
           <Link to="/car">Car</Link>
-        </Animation>
+        </AnimationHeader>
       </nav>
 
       <div onClick={handlerThemeChange}>
-        <Animation>
+        <AnimationHeader>
           <Darkmode switchMode="static" hover switchStyles={darkmodeVariables} icons />
-        </Animation>
+        </AnimationHeader>
       </div>
     </header>
   );
 };
 export default Header;
-
-const Animation = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <motion.div className="[&>a]:h-full [&>a]:w-max [&>a]:px-2 [&>a]:flex [&>a]:items-center [&>a]:justify-around"
-      initial={{ opacity: 1 }}
-      whileHover={{ scale: 1.1 }}
-      transition={{ duration: 0.2 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
