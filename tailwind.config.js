@@ -9,17 +9,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        "loader1": "loader1 3s ease-in-out infinite",
-        "loader2": "loader2 3s ease-in-out infinite",
+        "loader1": "loader1 5s ease-in-out infinite",
+        "loader2": "loader2 5s ease-in-out infinite",
       },
       keyframes: {
         loader1: {
-          "0%": { width: "0%", boxShadow: "0 0 6px var(--color)" },
+          "0%": { width: "0%" },
           "40%": { width: "100%" },
           "100%": { width: "100%" }
         },
         loader2: {
-          "30%": { width: "0%", boxShadow: "0 0 6px var(--color)" },
+          "30%": { width: "0%" },
           "50%": { width: "100%" },
           "100%": { width: "0%" }
         }
