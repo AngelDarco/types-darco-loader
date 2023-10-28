@@ -2,6 +2,7 @@ import fondo from "../../../assets/videos/girl.mp4";
 import { motion } from "framer-motion";
 import Offers from "../offers/Offers";
 import poster from "../../../assets/imgs/poster.jpg";
+import Gallery from "../gallery/Gallery";
 const Home = () => {
   return (
     <div className="h-fit flex flex-col">
@@ -144,6 +145,7 @@ const Home = () => {
         </div>
       </section>
       <Offers />
+      <Gallery />
     </div>
   );
 };
