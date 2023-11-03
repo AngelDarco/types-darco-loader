@@ -28,32 +28,37 @@ const Gallery = () => {
     });
     const res = (res: boolean) => setObserver(res);
     obsv.getObserver(res);
-  }, [observerRef, observer]);
+  }, [observerRef.current, observer]);
 
   return (
     <motion.div
-      ref={observerRef}
       className="
-        h-fit
-        w-full
-        p-4
-        flex flex-col items-center
+    h-fit
+    w-full
+    p-4
     "
     >
       <div
+        ref={observerRef}
         className="
+        w-fit
+        h-fit
+        m-auto
+        my-10
       [&>h1]:text-7xl 
       [&>h1]:py-6
-      my-10
       [&>h1]:text-center
       "
       >
         <span
           className={`
           block
-            h-3 bg-orange-500
-            ${observer ? "animate-[loader1_2s_linear_forwards]" : ""}
-        `}
+                h-2
+                w-0
+                mb-6
+                bg-orange-600
+    ${observer ? "animate-[loader1_3s_linear_forwards]" : "no_way"}
+                `}
         ></span>
         <h1>Gallery</h1>
       </div>
