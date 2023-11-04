@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Offers from "../offers/Offers";
 import poster from "../../../assets/imgs/poster.jpg";
 import Gallery from "../gallery/Gallery";
+import Price from "../price/Price";
 const Home = () => {
   return (
     <div className="h-fit flex flex-col">
@@ -146,6 +147,7 @@ const Home = () => {
       </section>
       <Offers />
       <Gallery />
+      <Price />
     </div>
   );
 };

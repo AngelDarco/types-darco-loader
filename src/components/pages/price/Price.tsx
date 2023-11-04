@@ -8,7 +8,7 @@ const Price = () => {
     if (!observerRef.current) return;
     const observer = new Observer(observerRef.current, {
       root: null,
-      rootMargin: "300px",
+      rootMargin: "600px",
       threshold: 1,
     });
     const res = (res: boolean) => setObserver(res);
@@ -19,7 +19,7 @@ const Price = () => {
       ref={observerRef}
       layout
       layoutId="underline"
-      className="w-full h-fit flex justify-center flex-col items-center "
+      className="w-full h-fit flex justify-center flex-col items-center py-16"
     >
       <div
         className="
@@ -28,6 +28,7 @@ const Price = () => {
         py-10
         px-5
         [&>h1]:text-7xl
+        [&>h1]:my-14
       "
       >
         <span
@@ -46,18 +47,40 @@ const Price = () => {
       <div
         className="
         grid
+        gap-16
         grid-cols-3
         content-center
         h-fit
 
         [&>div]:border
-        [&>div]:h-screen
-        [&>div>h1]:text-5xl
+        [&>div]:px-4
+        [&>div]:py-10
+        [&>div]:text-center
+        
+        [&>div>h1]:text-3xl
+        [&>div>h1]:min-h-[100px]
+        [&>div>h1]:flex
+        [&>div>h1]:items-center
+        [&>div>h1]:justify-center
+
+        [&>div>span]:block
+        [&>div>span]:py-5
+        [&>div>span]:text-5xl
+        [&>div>p]:py-3
+        [&>div>button]:my-6
+        [&>div>button]:py-6
+        [&>div>button]:px-12
+        [&>div>button]:border
+        [&>div>button]:border-orange-600
+
+        [&>div:nth-child(2)]:border-orange-600
+        [&>div:nth-child(2)]:scale-110
+        [&>div:nth-child(2)>button]:bg-orange-600
       "
       >
         <div>
           <h1>Single Training</h1>
-          <strong>$150</strong>
+          <span>$150</span>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
@@ -65,7 +88,7 @@ const Price = () => {
         </div>
         <div>
           <h1>Package of 8 workouts</h1>
-          <strong>$150</strong>
+          <span>$1050</span>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
@@ -73,7 +96,7 @@ const Price = () => {
         </div>
         <div>
           <h1>Package of 12 workouts</h1>
-          <strong>$150</strong>
+          <span>$2050</span>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
