@@ -4,9 +4,10 @@ import Offers from "../offers/Offers";
 import poster from "../../../assets/imgs/poster.jpg";
 import Gallery from "../gallery/Gallery";
 import Price from "../price/Price";
+import Contact from "../contact/Contact";
 const Home = () => {
   return (
-    <div className="h-fit flex flex-col">
+    <div className="h-fit flex flex-col -mt-[var(--header-height)]">
       <section className=" h-screen flex items-center justify-center relative">
         <motion.div layout layoutId="underline">
           <div className="w-full h-full absolute top-0 left-0 z-10">
@@ -148,6 +149,7 @@ const Home = () => {
       <Offers />
       <Gallery />
       <Price />
+      <Contact />
     </div>
   );
 };

@@ -11,14 +11,17 @@ const Header = () => {
 
   // change the header background color on first render
   useEffect(() => {
-    const rootColor = getComputedStyle(root).getPropertyValue("--background-color") + "4a";
+    const rootColor =
+      getComputedStyle(root).getPropertyValue("--background-color") + "4a";
     setColor(rootColor);
 
     // set class dark or light in the first render
-    if(rootColor === "#0000004a"){
-      root.classList.replace("light","dark") ? "" : root.classList.add("dark");
-    }else 
-    root.classList.replace("dark", "light") ? "" : root.classList.add("light");
+    if (rootColor === "#0000004a") {
+      root.classList.replace("light", "dark") ? "" : root.classList.add("dark");
+    } else
+      root.classList.replace("dark", "light")
+        ? ""
+        : root.classList.add("light");
   }, [color]);
 
   const handlerThemeChange = () => {
@@ -27,10 +30,9 @@ const Header = () => {
     setColor(rootColor);
 
     // set the class dark or light with the switch
-    if(root.classList.contains("light"))
-      root.classList.replace("light","dark");
-    else
-    root.classList.replace("dark", "light");
+    if (root.classList.contains("light"))
+      root.classList.replace("light", "dark");
+    else root.classList.replace("dark", "light");
   };
 
   return (
@@ -77,7 +79,6 @@ const Header = () => {
         <AnimationHeader>
           <span>Jhon Doe</span>
         </AnimationHeader>
-
       </div>
 
       <nav className="flex items-center justify-around w-full h-full px-5 laptop:hidden">
@@ -106,7 +107,12 @@ const Header = () => {
 
       <div onClick={handlerThemeChange}>
         <AnimationHeader>
-          <Darkmode switchMode="static" hover switchStyles={darkmodeVariables} icons />
+          <Darkmode
+            switchMode="static"
+            hover
+            switchStyles={darkmodeVariables}
+            icons
+          />
         </AnimationHeader>
       </div>
     </header>
