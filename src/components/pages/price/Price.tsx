@@ -51,6 +51,8 @@ const Price = () => {
         grid-cols-3
         content-center
         h-fit
+        p-4
+        pb-36
 
         [&>div]:border
         [&>div]:px-4
