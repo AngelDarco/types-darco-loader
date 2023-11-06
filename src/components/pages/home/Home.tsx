@@ -24,8 +24,8 @@ const Home = () => {
           </div>
 
           <div className="absolute top-0 left-0 w-full h-full z-20 flex items-center justify-center flex-col dark:bg-[rgba(0,0,0,0.5)] bg-[rgba(255,255,255,0.2)]">
-            <h1 className="text-8xl px-10 drop-shadow-[0_0_6px_var(--color)]">
-              Personal Trainer
+            <h1 className="text-8xl px-10 drop-shadow-[0_0_6px_var(--color)] text-center">
+              PERSONAL TRAINER
             </h1>
             <h3 className="text-4xl bold shadow-lg my-9 text-center px-4">
               I will help you achieve the intended results{" "}
@@ -50,7 +50,7 @@ const Home = () => {
              content-center
              p-4
 
-          [&>div>h1]:text-5xl 
+          [&>div>h1]:text-5xl
           [&>div>h1]:py-6 
           [&>div]:text-center
           [&>div]:relative
