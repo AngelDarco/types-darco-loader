@@ -5,6 +5,7 @@ import poster from "../../../assets/imgs/poster.jpg";
 import Gallery from "../gallery/Gallery";
 import Price from "../price/Price";
 import Contact from "../contact/Contact";
+import Footer from "../footer/Footer";
 const Home = () => {
   return (
     <div className="h-fit flex flex-col -mt-[var(--header-height)]">
@@ -150,6 +151,7 @@ const Home = () => {
       <Gallery />
       <Price />
       <Contact />
+      <Footer />
     </div>
   );
 };
