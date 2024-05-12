@@ -100,45 +100,45 @@ const Header = () => {
       </div>
 
       {links || openMenu ? (
-        <nav className="flex items-center justify-around w-full h-full laptop:py-[var(--header-height)] laptop:w-[50%] laptop:h-[100vh] laptop:absolute laptop:top-0 laptop:right-0 laptop:flex-col laptop:bg-black/[.2] laptop:backdrop-blur-[5px] laptop:shadow-[0 4px 30px rgba(0, 0, 0, 0.1)]-lg laptop:[&>*]:text-[var(--color)] [&>*]:transition [&>*]:delay-150">
+        <nav className="flex items-center justify-around w-full h-full laptop:py-[var(--header-height)] laptop:w-[50%] laptop:h-[100vh] laptop:absolute laptop:top-0 laptop:right-0 laptop:flex-col laptop:bg-[var(--bg-glass)] laptop:backdrop-blur-[5px] laptop:shadow-[0 4px 30px rgba(0, 0, 0, 0.1)]-lg laptop:[&>*]:text-[var(--color-glass)] [&>*]:transition [&>*]:delay-150">
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/"
           >
             Home
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/offers"
           >
             Offers
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/prices"
           >
             Price
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/about"
           >
             About me
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/clients"
           >
             Clients
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/contact"
           >
             Contact
           </Link>
           <Link
-            className="laptop:hover:bg-white/[.2] laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-white/[.2]"
+            className=" laptop:w-full laptop:h-1/2 flex items-center justify-center px-2 h-full text-nowrap hover:bg-[var(--bg-glass)]"
             to="/car"
           >
             Car
